@@ -167,8 +167,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         update_tri_layer(_LOWER, _RAISE, _ADJUST);
 
         if (lower_pressed) {
-          register_code(KC_LALT);
-          unregister_code(KC_LALT);
+          tap_code_delay(KC_LALT, 30);
         }
         lower_pressed = false;
       }
@@ -185,8 +184,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         update_tri_layer(_LOWER, _RAISE, _ADJUST);
 
         if (raise_pressed) {
-          register_code(KC_RALT);
-          unregister_code(KC_RALT);
+          tap_code_delay(KC_RALT, 30);
         }
         raise_pressed = false;
       }

@@ -55,8 +55,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       } else {
         layer_off(_LOWER);
         if (lower_pressed) {
-          register_code(KC_LALT);
-          unregister_code(KC_LALT);
+          tap_code_delay(KC_LALT, 30);
         }
         lower_pressed = false;
       }
@@ -69,8 +68,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       } else {
         layer_off(_RAISE);
         if (raise_pressed) {
-          register_code(KC_RALT);
-          unregister_code(KC_RALT);
+          tap_code_delay(KC_RALT, 30);
         }
         raise_pressed = false;
       }
